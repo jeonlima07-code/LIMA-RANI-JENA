@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<script>
+if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+}
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+    darkMode: 'class'
+}
+</script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen transition-all duration-300 text-gray-900 dark:text-white">
+
+<!-- NAVBAR -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <h1 class="text-2xl font-bold text-blue-600">
+            🚀CareerConnect
+        </h1>
+
+        <span id="welcomeUser" class="ml-4 text-sm text-blue-600"></span>
+
+        <div class="flex items-center gap-2">
+            <button id="logoutBtn" class="bg-red-500 text-white px-3 py-1 rounded-lg">
+                Logout
+            </button>
+
+            <button id="darkModeBtn" class="bg-gray-800 text-white px-3 py-1 rounded-lg">
+                🌙 Dark Mode
+            </button>
+        </div>
+
+        <ul class="flex gap-6 text-gray-700 dark:text-gray-200 font-medium">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<!-- CONTACT SECTION -->
+<div class="max-w-xl mx-auto py-20 px-6">
+
+    <h1 class="text-5xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+        Contact Us
+    </h1>
+
+    <!-- CONTACT CARD -->
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-xl">
+
+        <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <input
+            type="email"
+            placeholder="Your Email"
+            class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+
+        <textarea
+            placeholder="Your Message"
+            class="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white p-3 rounded-lg mb-4 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        ></textarea>
+
+        <button onclick="sendMessage()"
+class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
+Send Message
+</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

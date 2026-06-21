@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs</title>
+
+<script>
+if (localStorage.getItem("theme") === "dark") {
+    document.documentElement.classList.add("dark");
+}
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+    darkMode: 'class'
+}
+</script>
+</head>
+
+<body id="body" class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen transition-all duration-300 text-gray-900 dark:text-white">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <h1 class="text-2xl font-bold text-blue-600">
+            🚀CareerConnect
+        </h1>
+<span id="welcomeUser" class="ml-4 text-sm text-blue-600"></span>
+            <button
+        id="logoutBtn"
+        class="bg-red-500 text-white px-3 py-1 rounded-lg ml-4"
+    >
+        Logout
+    </button>
+<button
+id="darkModeBtn"
+class="bg-gray-800 text-white px-3 py-1 rounded-lg ml-2"
+>
+🌙 Dark Mode
+</button>
+        <ul class="flex gap-6 text-gray-700 dark:text-gray-200 font-medium">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+<h1 class="text-4xl font-bold text-center py-10">
+Available Jobs
+</h1>
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+
+<div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg text-gray-900 dark:text-white">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">
+Frontend Developer
+</h3>
+<p class="text-blue-600 dark:text-blue-400 mt-2">
+Google
+</p>
+<p class="mt-2 text-gray-700 dark:text-gray-300">
+📍 Bangalore
+</p>
+<p class="text-gray-700 dark:text-gray-300">
+💰 ₹8-12 LPA
+</p>
+<button onclick="applyJob()" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+Apply
+</button>
+
+<button onclick="saveJob()" class="saveBtn mt-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+❤️ Save Job
+</button>
+</div>
+
+<div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg text-gray-900 dark:text-white">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">
+UI/UX Designer
+</h3>
+<p class="text-blue-600 dark:text-blue-400 mt-2">
+Microsoft
+</p>
+<p class="mt-2 text-gray-700 dark:text-gray-300">
+📍 Hyderabad
+</p>
+<p class="text-gray-700 dark:text-gray-300">
+💰 ₹6-10 LPA
+</p>
+<button onclick="applyJob()" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+Apply
+</button>
+
+<button onclick="saveJob()" class="saveBtn mt-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+❤️ Save Job
+</button>
+</div>
+
+<div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg text-gray-900 dark:text-white">
+<h3 class="text-xl font-bold text-gray-900 dark:text-white">
+Data Analyst
+</h3>
+<p class="text-blue-600 dark:text-blue-400 mt-2">
+Amazon
+</p>
+<p class="mt-2 text-gray-700 dark:text-gray-300">
+📍 Chennai
+</p>
+<p class="text-gray-700 dark:text-gray-300">
+💰 ₹7-11 LPA
+</p>
+<button onclick="applyJob()" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg">
+Apply
+</button>
+
+<button onclick="saveJob()" class="saveBtn mt-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+❤️ Save Job
+</button>
+</div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

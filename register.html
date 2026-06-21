@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+
+<script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 min-h-screen flex items-center justify-center transition-all duration-300 text-gray-900 dark:text-white">
+
+<div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl w-full max-w-md">
+<!-- Left Side -->
+<div class="bg-blue-600 text-white p-10 flex flex-col justify-center">
+
+    <h1 class="text-4xl font-bold mb-4">
+        Create Account
+    </h1>
+
+    <p class="text-lg">
+        Register to access thousands of job opportunities and continue your career journey.
+    </p>
+
+</div>
+
+<!-- Right Side -->
+<div class="p-8">
+<h2 class="text-3xl font-bold text-center mb-6">
+Create Account
+</h2>
+
+<input id="name"
+type="text"
+placeholder="Full Name"
+class="w-full border p-3 rounded-lg mb-4"
+/>
+
+<input id="email"
+type="email"
+placeholder="Email"
+class="w-full border p-3 rounded-lg mb-4"
+/>
+
+<input id="password"
+type="password"
+placeholder="Password"
+class="w-full border p-3 rounded-lg mb-4"
+/>
+
+<input
+type="password"
+placeholder="Confirm Password"
+class="w-full border p-3 rounded-lg mb-4"
+/>
+
+<button
+id="registerBtn"
+class="w-full bg-blue-600 text-white py-3 rounded-lg"
+>
+Register
+</button>
+
+<p class="text-center mt-4">
+Already have an account?
+<a href="login.html" class="text-blue-600">
+Login
+</a>
+</p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
